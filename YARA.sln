@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YARA", "YARA\YARA\YARA.csproj", "{A6EF85D9-53F6-44C0-9BB6-94D5E92B3782}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YARA.Test", "YARA\YARA.Test\YARA.Test.csproj", "{86D684E2-0F04-463F-BB68-15128B036542}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YARA.Vsix", "YARA\YARA.Vsix\YARA.Vsix.csproj", "{7F5B69B3-87A6-4DDC-B1D7-1D722C5D3AD7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6EF85D9-53F6-44C0-9BB6-94D5E92B3782}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6EF85D9-53F6-44C0-9BB6-94D5E92B3782}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6EF85D9-53F6-44C0-9BB6-94D5E92B3782}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6EF85D9-53F6-44C0-9BB6-94D5E92B3782}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86D684E2-0F04-463F-BB68-15128B036542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86D684E2-0F04-463F-BB68-15128B036542}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86D684E2-0F04-463F-BB68-15128B036542}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86D684E2-0F04-463F-BB68-15128B036542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F5B69B3-87A6-4DDC-B1D7-1D722C5D3AD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F5B69B3-87A6-4DDC-B1D7-1D722C5D3AD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F5B69B3-87A6-4DDC-B1D7-1D722C5D3AD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F5B69B3-87A6-4DDC-B1D7-1D722C5D3AD7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -62,7 +62,7 @@ namespace YARA {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Synchronous calls in async method should be made Async.
+        ///   Looks up a localized string similar to This Analyzer finds and fixes EntityFramework synchronos calls in async methods.
         /// </summary>
         internal static string AnalyzerDescription {
             get {

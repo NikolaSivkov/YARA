@@ -68,7 +68,7 @@ namespace YARA
                         if (containingNamespace == _efNamespace)
                         {
                             AddNamespace(invokeMethod.ContainingNamespace);
-                            
+
                             if (HasMethod(invokeMethod.Name))
                             {
                                 context.ReportDiagnostic(Diagnostic.Create(Rule, location, invokeMethod.Name));
@@ -84,7 +84,11 @@ namespace YARA
                         //if the sibling is a property ( DB.myTable ) 
                         var parentSymbolAsProperty = context.SemanticModel.GetSymbolInfo(parentNode).Symbol as IPropertySymbol;
 
-                        if (parentSymbolAsProperty != null && parentSymbolAsProperty.Type.Interfaces.Any(x => x.ContainingNamespace.ToString() == _efNamespace))
+                        if (parentSymbolAsProperty != null && (
+                                                                    (parentSymbolAsProperty.Type?.ContainingNamespace?.ToString() ?? "") == _efNamespace
+                                                                 || (parentSymbolAsProperty.Type?.Interfaces.Any(x => x.ContainingNamespace.ToString() == _efNamespace) ?? false)
+                                                              )
+                            )
                         {
                             parentIsEfType = true;
                         }
@@ -96,7 +100,7 @@ namespace YARA
                         {
                             parentIsEfType = true;
                         }
-                        
+
                         if (HasMethod(invokeMethod.Name) && parentIsEfType)
                         {
                             context.ReportDiagnostic(Diagnostic.Create(Rule, location, invokeMethod.Name));
@@ -108,7 +112,7 @@ namespace YARA
 
         private void AddNamespace(INamespaceSymbol namespaceSymbol)
         {
-            if (_names.IsEmpty) return;
+            if (!_names.IsEmpty) return;
 
             var classList = namespaceSymbol.GetMembers();
 

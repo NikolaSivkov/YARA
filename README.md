@@ -13,16 +13,16 @@ Example :
 ```csharp
 myDbContext.MyTable.ToList();
 //Will be transfromed to 
-myDbContext.MyTable.ToListAsync();
+await myDbContext.MyTable.ToListAsync();
 ```
 ```csharp
 myDbContext.MyTable.First(x=>x.foo =="foo");
 //Will be transfromed to 
-myDbContext.MyTable.FirstAsync(x=>x.foo =="foo");
+await myDbContext.MyTable.FirstAsync(x=>x.foo =="foo");
 ```
 
 ```csharp
 myDbContext.MyTable.Where(x=>x.foo =="foo").ToList();
 //Will be transfromed to 
-myDbContext.MyTable.Where(x=>x.foo =="foo").ToListAsync();
+await myDbContext.MyTable.Where(x=>x.foo =="foo").ToListAsync();
 ```

@@ -3,7 +3,6 @@ Yet Another Roslyn Analyzer
 
 
 ##Fixes
-hr
 This analyzer currently provides analysis and code fix for the following cases :
 
 #####YARA001-EFAsync
